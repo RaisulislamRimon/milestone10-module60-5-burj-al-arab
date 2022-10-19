@@ -1,22 +1,38 @@
-import React from "react";
-import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/Card";
+import React, { useState } from "react";
+import { toast } from "react-toastify";
+import Toast from "../Toast/Toast";
 
 const Banner = () => {
+  const [show, setShow] = useState(false);
+
+  const handleShowToast = () => {
+    setShow(true);
+    const notify = () => toast("Wow so easy!");
+    notify();
+  };
   return (
-    <Card className="text-center">
-      <Card.Header>
-        <h2>Burj-Al-Arab</h2>
-      </Card.Header>
-      <Card.Body>
-        <Card.Title>Special title treatment</Card.Title>
-        <Card.Text>
-          With supporting text below as a natural lead-in to additional content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-      <Card.Footer className="text-muted">2 days ago</Card.Footer>
-    </Card>
+    <div>
+      <div className="card w-full glass">
+        <figure>
+          <img src="https://placeimg.com/1600/425/arch" alt="car!" />
+        </figure>
+        <div className="card-body">
+          <h2 className="card-title">Burj-Al-Arab</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. At enim
+            molestias sapiente. Corrupti laboriosam minima nostrum optio cumque,
+            doloremque quia sequi saepe molestiae nesciunt esse autem non nemo
+            aliquam voluptatibus!
+          </p>
+          <div className="card-actions justify-end">
+            <button onClick={handleShowToast} className="btn btn-primary">
+              Book Now
+            </button>
+          </div>
+          {show && <Toast />}
+        </div>
+      </div>
+    </div>
   );
 };
 
