@@ -15,7 +15,11 @@ const routes = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Banner />,
+        element: (
+          <PrivateRoute>
+            <Banner />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/room",
