@@ -6,6 +6,7 @@ import PageNotFound from "../../components/PageNotFound/PageNotFound";
 import Home from "../../components/Home/Home";
 import Login from "../../components/Login/Login";
 import Register from "../../components/Register/Register";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 const routes = createBrowserRouter([
   {
@@ -18,7 +19,11 @@ const routes = createBrowserRouter([
       },
       {
         path: "/room",
-        element: <Home />,
+        element: (
+          <PrivateRoute>
+            <Home />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/login",
