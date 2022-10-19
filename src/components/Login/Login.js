@@ -27,7 +27,8 @@ const Login = () => {
       })
       .catch((error) => {
         console.error(error);
-        setError(error);
+        // setError(error);
+        setError("User not found/Wrong password");
       });
   };
 

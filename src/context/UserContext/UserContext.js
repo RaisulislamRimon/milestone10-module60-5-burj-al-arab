@@ -7,14 +7,13 @@ import {
   signOut,
 } from "firebase/auth";
 import app from "../../firebase/firebase.config";
-import { current } from "daisyui/src/colors";
 
 export const AuthContext = createContext();
 
 const auth = getAuth(app);
 
 const UserContext = ({ children }) => {
-  const [user, setUser] = useState({ displayName: "R" });
+  const [user, setUser] = useState({});
 
   const createUser = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
