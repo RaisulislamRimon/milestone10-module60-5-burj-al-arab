@@ -59,13 +59,13 @@ const Login = () => {
             />
           </div>
 
-          {/* {error && (
+          {error && (
             <p className="text-error border border-error p-1 my-3 rounded-xl text-center">
               {error}
             </p>
-          )} */}
+          )}
 
-          {error && <p className="error-text">{error}</p>}
+          {/* {error && <p className="error-text">{error}</p>} */}
           <button className="btn btn-wide btn-active btn-accent mx-auto my-10 text-white text-lg">
             Login
           </button>
