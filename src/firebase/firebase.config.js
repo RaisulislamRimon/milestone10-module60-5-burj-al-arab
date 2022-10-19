@@ -10,7 +10,7 @@ const firebaseConfig = {
   projectId: "burj-al-arab-55d23",
   storageBucket: "burj-al-arab-55d23.appspot.com",
   messagingSenderId: "982117986129",
-  appId: "1:982117986129:web:383bae8ea4f9b6358b2d70"
+  appId: "1:982117986129:web:383bae8ea4f9b6358b2d70",
 };
 
 // Initialize Firebase

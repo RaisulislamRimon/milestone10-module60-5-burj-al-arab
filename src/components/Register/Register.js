@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../context/UserContext/UserContext";
 
 const Register = () => {
+  const { user, createUser } = useContext(AuthContext);
+
+  console.log("create user register", user, createUser);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
