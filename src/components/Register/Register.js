@@ -1,10 +1,11 @@
 import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/UserContext/UserContext";
 
 const Register = () => {
   const { user, createUser } = useContext(AuthContext);
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
   console.log("create user register", user, createUser);
 
@@ -26,10 +27,11 @@ const Register = () => {
         setError(null);
         console.log(user);
         form.reset();
+        navigate("/room");
       })
       .catch((error) => {
         console.error(error);
-        setError(error);
+        setError(`error-this email is already used`);
       });
   };
   return (
