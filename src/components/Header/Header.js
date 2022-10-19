@@ -30,11 +30,15 @@ const Header = () => {
               <li>
                 <Link to="/">Home</Link>
               </li>
-              <li tabIndex={0}>
-                <Link to="/login" className="justify-between">
-                  Login
-                </Link>
+
+              <li>
+                <Link to="/login">Login</Link>
               </li>
+
+              <li>
+                <Link to="/register">Register</Link>
+              </li>
+
               <li>
                 <Link to="/book">Book</Link>
               </li>
@@ -52,9 +56,15 @@ const Header = () => {
             <li>
               <Link to="/room">Room</Link>
             </li>
-            <li tabIndex={0}>
+
+            <li>
               <Link to="/login">Login</Link>
             </li>
+
+            <li>
+              <Link to="/register">Register</Link>
+            </li>
+
             <li>
               <Link to="/book">Book</Link>
             </li>
