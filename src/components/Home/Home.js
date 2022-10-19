@@ -50,7 +50,7 @@ const Home = () => {
   ];
   return (
     <>
-      <h2>this is home for {user?.user && user?.user}</h2>
+      <h2>this is home for {user?.email && user?.email}</h2>
       <div style={style}>
         {rooms.map((room) => (
           <Room key={room.bedType} room={room}></Room>
