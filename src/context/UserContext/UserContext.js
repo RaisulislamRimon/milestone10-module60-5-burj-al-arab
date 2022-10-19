@@ -1,9 +1,9 @@
-import React, { createContext } from "react";
+import React, { createContext, useState } from "react";
 
 export const AuthContext = createContext();
 
 const UserContext = ({ children }) => {
-  const user = { user: "R" };
+  const [user, setUser] = useState({ displayName: "R" });
   const authInfo = { user: user };
   return (
     <div>

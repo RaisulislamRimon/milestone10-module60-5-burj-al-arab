@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
+import { AuthContext } from "../../context/UserContext/UserContext";
 import Room from "../Room/Room";
 
 const Home = () => {
+  const { user } = useContext(AuthContext);
+
   const style = {
     display: "flex",
     margin: "40px",
@@ -46,11 +49,14 @@ const Home = () => {
     },
   ];
   return (
-    <div style={style}>
-      {rooms.map((room) => (
-        <Room key={room.bedType} room={room}></Room>
-      ))}
-    </div>
+    <>
+      <h2>this is home for {user?.user && user?.user}</h2>
+      <div style={style}>
+        {rooms.map((room) => (
+          <Room key={room.bedType} room={room}></Room>
+        ))}
+      </div>
+    </>
   );
 };
 
