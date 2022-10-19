@@ -5,7 +5,7 @@ import routes from "./Routes/Routes/Routes";
 const App = () => {
   return (
     <div>
-      <RouterProvider router    = {routes} />
+      <RouterProvider router={routes} />
     </div>
   );
 };
